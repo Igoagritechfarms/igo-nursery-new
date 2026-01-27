@@ -1,0 +1,259 @@
+
+import React from 'react';
+import { ArrowRight, Zap, Microscope, ShieldCheck, MapPin, ExternalLink, Pickaxe, Cpu, Leaf, Activity } from 'lucide-react';
+
+const Home: React.FC = () => {
+  return (
+    <div className="animate-in fade-in duration-1000">
+      {/* Precision Hero */}
+      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-igo-dark">
+        {/* Background Layer */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&q=80&w=2000" 
+            alt="Advanced Polyhouse" 
+            className="w-full h-full object-cover opacity-30 grayscale"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-igo-dark via-transparent to-igo-dark/40"></div>
+          {/* Animated Tech Grid Overlay */}
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#84cc16 0.5px, transparent 0.5px)', backgroundSize: '24px 24px' }}></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-md">
+                <div className="w-2 h-2 bg-igo-lime rounded-full animate-ping"></div>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-igo-lime">Muttukadu Lab Online</span>
+              </div>
+              
+              <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter">
+                NATURE <br />
+                <span className="text-gradient">ENGINEERED.</span>
+              </h1>
+              
+              <p className="text-xl text-gray-400 font-medium leading-relaxed max-w-lg">
+                IGO is not just a nursery. We are an AgriTech farm using IoT data and precision trials to grow the healthiest plant palette in India.
+              </p>
+
+              <div className="flex flex-wrap gap-5 pt-6">
+                <button onClick={() => window.location.hash = 'assistant'} className="bg-igo-lime text-igo-dark px-10 py-5 rounded-2xl font-black uppercase text-sm tracking-widest hover:bg-white hover:scale-105 transition-all flex items-center gap-3 shadow-[0_0_40px_rgba(132,204,22,0.3)]">
+                  Start Garden Assistant
+                  <Zap className="w-4 h-4 fill-current" />
+                </button>
+                <button onClick={() => window.location.hash = 'shop'} className="bg-white/10 border border-white/20 text-white px-10 py-5 rounded-2xl font-black uppercase text-sm tracking-widest hover:bg-white/20 transition-all">
+                  Shop Plants
+                </button>
+              </div>
+            </div>
+
+            {/* Visual Dashboard Side */}
+            <div className="hidden lg:block relative">
+              <div className="relative w-full aspect-square float">
+                {/* Floating Tech Modules */}
+                <div className="absolute top-10 -left-4 glass p-5 rounded-3xl shadow-2xl z-30 flex items-center gap-4 border-l-4 border-igo-lime">
+                  <div className="bg-igo-dark p-3 rounded-2xl">
+                    <Cpu className="text-igo-lime w-6 h-6" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-black text-igo-dark">28.4°C</div>
+                    <div className="text-[10px] text-igo-muted uppercase font-black tracking-widest">Core Lab Temp</div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-20 -right-10 glass p-5 rounded-3xl shadow-2xl z-30 flex items-center gap-4 border-l-4 border-blue-500">
+                  <div className="bg-blue-100 p-3 rounded-2xl">
+                    <ShieldCheck className="text-blue-600 w-6 h-6" />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-black text-igo-dark">99.2%</div>
+                    <div className="text-[10px] text-igo-muted uppercase font-black tracking-widest">Health Guarantee</div>
+                  </div>
+                </div>
+
+                {/* Hero Main Image Circle */}
+                <div className="w-[80%] h-[80%] mx-auto rounded-full border-[20px] border-white/5 overflow-hidden p-4">
+                  <img 
+                    src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800" 
+                    className="w-full h-full object-cover rounded-full"
+                    alt="Main Plant"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Live Projects Scroller */}
+      <section className="bg-gray-50 py-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 mb-12 flex justify-between items-end">
+            <div>
+                <h2 className="text-sm uppercase tracking-[0.4em] font-black text-igo-lime mb-2">Portfolio Feed</h2>
+                <p className="text-4xl font-black text-igo-dark tracking-tighter">Live from our Sites.</p>
+            </div>
+            <button onClick={() => window.location.hash = 'landscape'} className="text-xs font-black uppercase tracking-widest text-igo-muted hover:text-igo-dark transition-colors border-b-2 border-transparent hover:border-igo-dark pb-1">View All Case Studies</button>
+        </div>
+
+        <div className="flex gap-8 overflow-x-auto px-4 lg:px-[calc((100vw-80rem)/2)] no-scrollbar pb-10">
+            {[
+                { title: 'ECR Ocean Villa', status: 'Planting Phase', area: '12,000 sq.ft', img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600' },
+                { title: 'The Palms Resort', status: 'AMC Active', area: '4.5 Acres', img: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=600' },
+                { title: 'Zen Corporate HQ', status: 'Interior Bio-Design', area: '25,000 sq.ft', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600' },
+                { title: 'Muttukadu Heights', status: 'Vertical Greenery', area: '3,200 sq.ft', img: 'https://images.unsplash.com/photo-1590054790395-63ad360ca217?auto=format&fit=crop&q=80&w=600' }
+            ].map((proj, i) => (
+                <div key={i} className="flex-shrink-0 w-80 bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden group cursor-pointer hover:shadow-xl transition-all">
+                    <div className="h-48 relative overflow-hidden">
+                        <img src={proj.img} alt={proj.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <div className="absolute top-4 right-4 bg-igo-dark/80 backdrop-blur px-3 py-1 rounded-full text-[8px] font-black text-white uppercase tracking-widest">{proj.status}</div>
+                    </div>
+                    <div className="p-6">
+                        <div className="text-[10px] font-bold text-igo-lime uppercase tracking-widest mb-1">{proj.area}</div>
+                        <h4 className="text-lg font-black text-igo-dark">{proj.title}</h4>
+                    </div>
+                </div>
+            ))}
+        </div>
+      </section>
+
+      {/* Industrial Segment Cards */}
+      <section className="py-32 max-w-7xl mx-auto px-4">
+        <div className="text-center space-y-4 mb-20">
+          <h2 className="text-sm uppercase tracking-[0.4em] font-black text-igo-lime">The IGO Collective</h2>
+          <p className="text-4xl md:text-5xl font-black text-igo-dark tracking-tighter">Full-Stack Greenery Services.</p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8">
+          {[
+            { 
+              title: 'D2C Retail Store', 
+              tagline: 'Precision Grown',
+              desc: 'Premium polyhouse-grown plants delivered across India with our zero-damage packaging guarantee.', 
+              icon: <Leaf className="w-10 h-10" />,
+              link: '#shop',
+              img: 'https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&q=80&w=800',
+              accent: 'bg-igo-lime'
+            },
+            { 
+              title: 'Landscape Studio', 
+              tagline: 'Architectural Scale',
+              desc: 'From villa sanctuaries to resort estates. We handle everything from soil R&D to final execution.', 
+              icon: <Pickaxe className="w-10 h-10 rotate-45" />,
+              link: '#landscape',
+              img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800',
+              accent: 'bg-igo-dark'
+            },
+            { 
+              title: 'AMC Program', 
+              tagline: 'Smart Garden Care',
+              desc: 'Annual maintenance contracts managed by lab-certified agronomists. We track health so you don\'t have to.', 
+              icon: <Zap className="w-10 h-10" />,
+              link: '#amc',
+              img: 'https://images.unsplash.com/photo-1558905619-17254263bc89?auto=format&fit=crop&q=80&w=800',
+              accent: 'bg-white border-2 border-igo-dark'
+            }
+          ].map((card, idx) => (
+            <div key={idx} className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700 border border-gray-100 flex flex-col h-full">
+              <div className="h-64 overflow-hidden relative">
+                <img src={card.img} alt={card.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                <div className="absolute top-6 left-6 px-4 py-1 rounded-full bg-igo-dark/80 backdrop-blur-md text-white text-[10px] font-black uppercase tracking-widest">{card.tagline}</div>
+              </div>
+              <div className="p-10 flex-grow flex flex-col justify-between">
+                <div>
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${card.accent} ${idx === 1 ? 'text-igo-lime' : idx === 0 ? 'text-igo-dark' : 'text-igo-dark'}`}>
+                    {card.icon}
+                  </div>
+                  <h3 className="text-3xl font-black mb-4 tracking-tighter">{card.title}</h3>
+                  <p className="text-igo-muted font-medium leading-relaxed mb-8">{card.desc}</p>
+                </div>
+                <button onClick={() => window.location.hash = card.link.replace('#', '')} className="inline-flex items-center text-igo-dark font-black uppercase text-xs tracking-widest hover:gap-4 transition-all text-left">
+                  Explore Service <ArrowRight className="ml-3 w-4 h-4 text-igo-lime" />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Tech Lab Spotlight */}
+      <section className="bg-igo-dark py-32 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="space-y-10">
+              <div className="inline-flex items-center gap-2 text-igo-lime">
+                <Microscope className="w-6 h-6" />
+                <span className="uppercase font-black tracking-widest text-xs">IGO Lab R&D Division</span>
+              </div>
+              <h2 className="text-5xl md:text-7xl font-black text-white leading-tight tracking-tighter">
+                We Build <span className="text-igo-lime">Biologically Superior</span> Gardens.
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed font-light">
+                Every plant that leaves our Muttukadu campus has passed through our AgriTech lab. We monitor soil pH, moisture tension, and UV stress to ensure your garden doesn't just look good—it thrives.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <div className="text-4xl font-black text-white">14+</div>
+                  <div className="text-xs font-bold text-igo-muted uppercase tracking-widest">Active Trials</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-black text-white">25 Acres</div>
+                  <div className="text-xs font-bold text-igo-muted uppercase tracking-widest">High-Tech Campus</div>
+                </div>
+              </div>
+
+              <button onClick={() => window.location.hash = 'lab'} className="text-igo-lime font-black uppercase text-xs tracking-[0.3em] flex items-center gap-4 hover:gap-6 transition-all">
+                Enter The Lab <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=600" className="rounded-3xl w-full h-full object-cover" alt="Lab 1" />
+                <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&q=80&w=600" className="rounded-3xl w-full h-full object-cover mt-12" alt="Lab 2" />
+              </div>
+              {/* Telemetry Box */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-igo-lime rounded-full p-1 shadow-[0_0_80px_rgba(132,204,22,0.4)] animate-pulse flex items-center justify-center">
+                 <div className="bg-igo-dark w-full h-full rounded-full flex flex-col items-center justify-center text-center p-4">
+                    <Pickaxe className="text-igo-lime w-8 h-8 mb-2 rotate-45" />
+                    <span className="text-[10px] text-white font-black uppercase leading-tight">IGO-OS <br/> v2.4 Active</span>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Standard Trust */}
+      <section className="py-24 border-b border-gray-100 bg-gray-50/50">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-12">
+            {[
+                { label: 'Plant Deliveries', value: '150,000+' },
+                { label: 'Studio Projects', value: '450+' },
+                { label: 'Team Size', value: '85 Experts' },
+                { label: 'Client Satisfaction', value: '99.8%' },
+            ].map((stat, i) => (
+                <div key={i} className="text-center group cursor-default">
+                    <div className="text-4xl md:text-5xl font-black text-igo-dark mb-2 transition-transform group-hover:scale-110 group-hover:text-igo-lime">{stat.value}</div>
+                    <div className="text-[10px] text-igo-muted font-black uppercase tracking-[0.2em]">{stat.label}</div>
+                </div>
+            ))}
+        </div>
+      </section>
+
+      {/* Call to Action: Project Capture */}
+      <section className="py-32 bg-white">
+        <div className="max-w-5xl mx-auto px-4 text-center space-y-12">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter">Ready to Build Your <br/><span className="italic font-serif">Living Legacy?</span></h2>
+            <p className="text-igo-muted text-xl max-w-2xl mx-auto font-medium">Whether you need an office plant or a resort masterplan, IGO combines art and science to create spaces that breathe.</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-6">
+                <button onClick={() => window.location.hash = 'assistant'} className="bg-igo-dark text-white px-12 py-6 rounded-2xl font-black uppercase text-sm tracking-widest hover:bg-igo-charcoal shadow-2xl transition-all">Start Project Wizard</button>
+                <button onClick={() => window.location.hash = 'visit'} className="bg-gray-100 text-igo-dark px-12 py-6 rounded-2xl font-black uppercase text-sm tracking-widest hover:bg-gray-200 transition-all">Visit Our Campus</button>
+            </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;

@@ -1,0 +1,7 @@
+{
+  "name": "IGO Nursery - High-Tech Agritech Platform",
+  "description": "A world-class digital experience for IGO Nursery, blending premium D2C ecommerce, landscape architecture, and smart-garden tech.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
