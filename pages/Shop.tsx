@@ -94,7 +94,7 @@ const Shop: React.FC<ShopProps> = ({ addToCart }) => {
             </div>
             <div className="flex flex-col items-center">
                 <RotateCcw className="w-12 h-12 text-green-600 mb-4" />
-                <h4 className="font-bold text-xl mb-2">15-Day Free Returns</h4>
+                <h4 className="font-bold text-xl mb-2">15-Day Free Returnssssssssss</h4>
                 <p className="text-gray-500 text-sm">Not happy with the health? We'll replace it, no questions asked.</p>
             </div>
         </div>
